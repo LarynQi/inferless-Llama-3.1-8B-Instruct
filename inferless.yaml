@@ -1,6 +1,6 @@
 version: 1.0.0
 
-name: Llama-3.1-8B-Instruct
+name: Llama-3.1-70B-Instruct
 import_source: GIT
 
 # you can choose the options between ONNX, TENSORFLOW, PYTORCH
@@ -26,7 +26,9 @@ configuration:
   max_replica: '1'
   min_replica: '0'
   scale_down_delay: '600'
-  custom_runtime_version: '0'
+  region: region-2
+  vcpu: '20.0'
+  ram: '200'
 env:
   # Add your environment variables here
   # ENV: 'PROD'
@@ -39,6 +41,6 @@ optional:
   input_file_name: input.json
   output_file_name: output.json
   runtime_file_name: inferless-runtime-config.yaml
-model_url: https://github.com/inferless/Llama-3.1-8B-Instruct.git
+model_url: https://github.com/LarynQi/inferless-Llama-3.1-8B-Instruct.git
 provider: GITHUB
 io_schema: true

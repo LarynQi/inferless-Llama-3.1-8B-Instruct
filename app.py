@@ -3,7 +3,7 @@ from transformers import AutoTokenizer
 
 class InferlessPythonModel:
     def initialize(self):
-        model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+        model_id = "meta-llama/Meta-Llama-3.1-70B-Instruct"
         self.llm = LLM(model=model_id,dtype="float16")
         self.tokenizer = AutoTokenizer.from_pretrained(model_id)
 
